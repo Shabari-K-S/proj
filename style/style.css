@@ -32,3 +32,8 @@
 .collection .card{
     margin: 10px;
 }
+
+.foot {
+    background-color:black;
+    color: white;
+  }
