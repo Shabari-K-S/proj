@@ -1,186 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <style>
-      .je {
-        font-size: 2rem;
-        display: block;
-        font-style: italic;
-        text-align: center;
-        color: black;
-        margin: 10px; /* 
-        border-radius: 10px;
-        border: 2px solid black; */
-      }
-      a {
-        margin-right: 20px;
-      }
-      .new {
-        /* 
-        background-color: ; */
-        border-radius: 10%;
-        margin: 10%;
-        border: 4px solid black;
-      }
-      #para {
-        font-weight: 450;
-      }
-      .foot {
-        background-color: black;
-        color: white;
-      }
-    </style>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/hoodies.html">Hoodie</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Stickers</a>
-            </li>
+    .je {
+    background-color: ;
+    font-style: italic;
+    text-align: center;
+    color: black;
+    margin: 10px;
+    border-radius: 10px;
+    border: 4px solid black;
+    }
+    a {
+      margin-right: 20px;
+    }
+    .new {
+      background-color: ;
+      border-radius: 10%;
+      margin: 10%;
+      border: 4px solid black;
+    }
+    #para {
+      font-weight:450;
+    }
+    .foot {
+      background-color:black;
+      color: white;
+    }
+    * {
+  box-sizing: border-box;
+}
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                aria-current="page"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                About
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Technology Used</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item disabled">Thank You</a></li>
-              </ul>
-            </li>
-          </ul>
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <span style="color: gold;">Ani</span>-Store
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="../index.html ">Home</a>
+      <a href="../pages/hoodies.html"  >Hoodies</a>
+      <a href="../pages/stickers.html"  >Stickers</a>
+      <a href="../pages/about.html"  >About us</a>
+    </div>
+  </div>
+    <h1 class="display-1 fw-bold  je">About us</h1>
+    <div class="px-4 py-5 my-5 text-center new">
+        <img class="d-block mx-auto mb-4 rounded-circle border border-dark  border-2"  src="../assets/3.jpg" alt="" width="200">
+        <h1 class="display-5 fw-bold text-body-emphasis">Jeevanandhan J</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 " id="para">I am a Computer Science engineer with a passion for technology. I believe that hard work, combined with an unyielding desire to succeed, leads to success.I love learning new things and figuring out how to implement them into my work. I want to be part of the future of technology.</p>
+          <a href="https://www.linkedin.com/in/jeevanandhan01"  ><img src="../assets/linkedin.png" alt="linkedin"></a>
+          <a href="https://github.com/Jeevanandhan01"  ><img src="../assets/github.png" alt="github"></a>
+          <a href="mailto:jeevanandhanofficial@gmail.com"  ><img src="../assets/mail.png" alt="mail"></a>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          </div>
         </div>
       </div>
-    </nav>
-    <h1 class="display-1 fw-bold je">About us</h1>
-    <div class="px-4 py-5 my-5 text-center new">
-      <img
-        class="d-block mx-auto mb-4 rounded-circle border border-dark border-2"
-        src="../assets/3.jpg"
-        alt=""
-        width="200"
-      />
-      <h2 class="display-10 fw-bold text-body-emphasis">Jeevanandhan J</h2>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4" id="para">
-          I am a Computer Science engineer with a passion for technology. I
-          believe that hard work, combined with an unyielding desire to succeed,
-          leads to success.I love learning new things and figuring out how to
-          implement them into my work. I want to be part of the future of
-          technology.
-        </p>
-        <a href="https://www.linkedin.com/in/jeevanandhan01" target="_blank"
-          ><img src="../assets/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="https://github.com/Jeevanandhan01" target="_blank"
-          ><img src="../assets/github.png" alt="github"
-        /></a>
-        <a href="mailto:jeevanandhanofficial@gmail.com" target="_blank"
-          ><img src="../assets/mail.png" alt="mail"
-        /></a>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
+      <div class="px-4 py-5 my-5 text-center new">
+        <img class="d-block mx-auto mb-4 rounded-circle border border-dark  border-2" src="../assets/2.jpg" alt="" width="200">
+        <h1 class="display-5 fw-bold text-body-emphasis">Kamalakannan N G</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 " id="para">Highly motivated CSE student with a strong passion for web development and has intermediate proficiency in Java , Python and C</p>
+          <a href="https://www.linkedin.com/in/kamala-kannan-n-g-a95461249/"  ><img src="../assets/linkedin.png" alt="linkedin"></a>
+          <a href="https://github.com/kamalakannanngk"  ><img src="../assets/github.png" alt="github"></a>
+          <a href="mailto:2k21cse060@kiot.ac.in"  ><img src="../assets/mail.png" alt="mail"></a>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="px-4 py-5 my-5 text-center new">
-      <img
-        class="d-block mx-auto mb-4 rounded-circle border border-dark border-2"
-        src="../assets/2.jpg"
-        alt=""
-        width="200"
-      />
-      <h1 class="display-5 fw-bold text-body-emphasis">Kamalakannan N G</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4" id="para">
-          Highly motivated CSE student with a strong passion for web development
-          and has intermediate proficiency in Java , Python and C
-        </p>
-        <a
-          href="https://www.linkedin.com/in/kamala-kannan-n-g-a95461249/"
-          target="_blank"
-          ><img src="../assets/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="https://github.com/kamalakannanngk" target="_blank"
-          ><img src="../assets/github.png" alt="github"
-        /></a>
-        <a href="mailto:2k21cse060@kiot.ac.in" target="_blank"
-          ><img src="../assets/mail.png" alt="mail"
-        /></a>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
+      <div class="px-4 py-5 my-5 text-center new">
+        <img class="d-block mx-auto mb-4 rounded-circle border border-dark  border-2" src="../assets/1.jpg" alt="" width="200">
+        <h1 class="display-5 fw-bold text-body-emphasis">Shabari K S</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 " id="para">I am a Cyber Security enthusiast and Pro Hacker actively engaged on Hack The Box platform.My skillset includes CTF challenges, web design, and development using HTML, CSS, and Python, C/C++ (basic), Java (basic) programming.</p>
+          <a href="https://www.linkedin.com/in/shabari-k-s-56421822a"  ><img src="../assets/linkedin.png" alt="linkedin"></a>
+          <a href="https://github.com/shabari-K-S"  ><img src="../assets/github.png" alt="github"></a>
+          <a href="mailto:2k21cse137@kiot.ac.in"  ><img src="../assets/mail.png" alt="mail"></a>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="px-4 py-5 my-5 text-center new">
-      <img
-        class="d-block mx-auto mb-4 rounded-circle border border-dark border-2"
-        src="../assets/1.jpg"
-        alt=""
-        width="200"
-      />
-      <h1 class="display-5 fw-bold text-body-emphasis">Shabari K S</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4" id="para">
-          I am a Cyber Security enthusiast and Pro Hacker actively engaged on
-          Hack The Box platform.My skillset includes CTF challenges, web design,
-          and development using HTML, CSS, and Python, C/C++ (basic), Java
-          (basic) programming.
-        </p>
-        <a
-          href="https://www.linkedin.com/in/shabari-k-s-56421822a"
-          target="_blank"
-          ><img src="../assets/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="https://github.com/shabari-K-S" target="_blank"
-          ><img src="../assets/github.png" alt="github"
-        /></a>
-        <a href="mailto:2k21cse137@kiot.ac.in" target="_blank"
-          ><img src="../assets/mail.png" alt="mail"
-        /></a>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
-      </div>
-    </div>
-    <footer class="py-3 my-4 mb-0 foot">
-      <center>
+      <footer class="py-3 my-4 mb-0 foot">
+        <center>
         <h3 class="nav justify-content-center border-bottom pb-3 mb-3">
           KNOWLEDGE INSTITUTE OF TECHNOLOGY
         </h3>
         <p class="text-center text-body-primary"><b>©JKS PVT LTD</b></p>
       </center>
-    </footer>
-  </body>
+      </footer>
+</body>
 </html>
