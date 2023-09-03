@@ -50,7 +50,7 @@
   .nav {
     height: 50px;
     width: 100%;
-    background-color: #4d4d4d;
+    background-color: black;
     position: relative;
   }
   
@@ -83,7 +83,7 @@
   }
   
   .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(228, 227, 227, 0.3);
   }
   
   .nav > #nav-check {
